@@ -1,0 +1,13 @@
+option java_package = "com.iflytek.edu.hbase.coprocessor";
+option java_outer_classname = "GetRowCount";
+option java_generic_services = true;
+option optimize_for = SPEED;
+message getRowCountRequest{
+}
+ message getRowCountResponse {
+	optional int64 rowCount = 1;
+} 
+service iflytekEduService {
+	rpc getRowCount(getRowCountRequest)
+	returns(getRowCountResponse);
+}
